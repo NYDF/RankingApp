@@ -41,11 +41,13 @@ const RankItems = () => {
     }, [])
 
     return (
-        <main>
-            <RankingGrid items={items} imgArr={MovieImageArr} drag={drag} allowDrop={allowDrop} drop={ drop} />
-            <ItemCollection item={items} drag={drag}  imgArr={MovieImageArr }  />
-        </main>
-        )
+        (items != null) ?
+            <main>
+                <RankingGrid items={items} imgArr={MovieImageArr} drag={drag} allowDrop={allowDrop} drop={drop} />
+                <ItemCollection items={items} drag={drag} imgArr={MovieImageArr} />
+                <button className="reload" style={{ "marginTop": "10px" }}> <span className="text" >Reload</span > </button>
+            </main>
+            : <main>Loading...</main>
+    )
 }
-
 export default RankItems;
