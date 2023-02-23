@@ -10,8 +10,8 @@ namespace RankingApp.Controllers
     {
         private static readonly IEnumerable<ItemModel> Items = new[]
             {
-            new ItemModel{Id =1, Title = "The Godfather", ImageId=1, Ranking=0,ItemType=1 },
-            new ItemModel{Id =2, Title = "Highlander", ImageId=2, Ranking=0,ItemType=1 },
+            new ItemModel { Id = 1, Title = "The Godfather", ImageId=1, Ranking=0,ItemType=1 },
+            new ItemModel { Id = 2, Title = "Highlander", ImageId=2, Ranking=0,ItemType=1 },
             new ItemModel { Id = 3, Title = "Highlander II", ImageId = 3, Ranking = 0, ItemType = 1 },
             new ItemModel { Id = 4, Title = "The Last of the Mohicans", ImageId = 4, Ranking = 0, ItemType = 1 },
             new ItemModel { Id = 5, Title = "Police Academy 6", ImageId = 5, Ranking = 0, ItemType = 1 },
