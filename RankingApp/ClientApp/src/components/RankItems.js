@@ -6,6 +6,11 @@ import ItemCollection from "./ItemCollection";
 const RankItems = () => {
     const [items, setItems] = useState([])
     const dataType = 1;
+    const [reload, setReload] = useState(false)
+
+    function Reload() {
+        setReload(true)
+    }
 
     function drag(ev) {
         ev.dataTransfer.setData("text", ev.target.id)
@@ -45,7 +50,8 @@ const RankItems = () => {
             <main>
                 <RankingGrid items={items} imgArr={MovieImageArr} drag={drag} allowDrop={allowDrop} drop={drop} />
                 <ItemCollection items={items} drag={drag} imgArr={MovieImageArr} />
-                <button className="reload" style={{ "marginTop": "10px" }}> <span className="text" >Reload</span > </button>
+                <button className="reload" onClick={Reload }
+                    style={{ "marginTop": "10px" }}> <span className="text" >Reload</span > </button>
             </main>
             : <main>Loading...</main>
     )
